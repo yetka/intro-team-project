@@ -16,19 +16,47 @@ function Language (language, confidence) {
 
 Student.prototype.displayStudent = function() {
   $("#studentList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
+  if (this.currentClass === "C#") {
+    $("#studentCList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
+  }
+  if (this.currentClass === "Ruby") {
+    $("#studentRubyList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
+  } else {
+    $("#studentAndroidList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
+  }
 }
 
-Student.prototype.showInfo = function() {
+Student.prototype.showInfo = function(index) {
   $(".studentInfo").show();
+  clearFields();
   $("#displayName").text(this.fullName);
   $("#displayEmail").text(this.contactInfo);
   $("#displayCurrentClass").text(this.currentClass);
-  $("#displayPreviousJobs").text(this.previousJob);
+  $("#displayPreviousJob").text(this.previousJob);
   $("#displayHobbies").text(this.hobby);
   this.languages.forEach(function(language) {
     $("#displayLanguages").append("<li>" + language.language + " " + language.confidence + "</li>");
   })
 }
+
+var clearFields = function() {
+  $("#displayName").text("");
+  $("#displayEmail").text("");
+  $("#displayCurrentClass").text("");
+  $("#displayPreviousJob").text("");
+  $("#displayHobbies").text("");
+  $("#displayLanguages").text("");
+}
+
+var clearForm = function() {
+  $("#name").val("");
+  $("#contact").val("");
+  $("#current-class").val("");
+  $(".extraForm").remove();
+  $("#work").val("");
+  $("#hobby").val("");
+}
+
 
 //initialize global variables
 var students = [];
@@ -38,7 +66,7 @@ $(document).ready(function() {
 
   //add form option to input multiple languages
   $("#add-language").click(function() {
-    $("#newLanguage").append(
+    $("#newLanguage").append('<div class="extraForm">' +
       '<div class="newLanguage">' +
         '<div class="form-group">' +
           '<label for="current-class">Select another Language:</label>' +
@@ -67,7 +95,8 @@ $(document).ready(function() {
             '<option>expert</option>' +
           '</select>' +
         '</div>' +
-      '</div>');
+      '</div>' +
+    '</div>');
   })
 
   //collect info from user
@@ -94,6 +123,7 @@ $(document).ready(function() {
     })
     newStudent.displayStudent();
 
+    clearForm();
     $(".clickStudent").last().click(function() {
       newStudent.showInfo();
     })

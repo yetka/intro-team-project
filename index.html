@@ -65,7 +65,7 @@
              <input id="work" class="form-control" type="text">
             </div>
             <div class="form-group">
-            <label for="hobby">What do you like to de outside of work and class:</label>
+            <label for="hobby">What do you like to do outside of work and class:</label>
             <input id="hobby" class="form-control" type="text">
            </div>
             <span class="btn btn-primary" id="add-language">Add language</span>
@@ -78,19 +78,38 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <ul id="studentList">
+          <div class="allStudents">
+            <h3>List of all Epicodus Students:</h3>
+            <ul id="studentList">
+            </ul>
+          </div>
+          <div class="cSharp">
+            <h3>List of C# class:</h3>
+            <ul id="studentCList">
+            </ul>
+          </div>
+          <div class="ruby">
+            <h3>List of Ruby class:</h3>
+            <ul id="studentRubyList">
+            </ul>
+          </div>
+          <div class="android">
+            <h3>List of Android class:</h3>
+            <ul id="studentAndroidList">
+            </ul>
+          </div>
 
-          </ul>
         </div>
         <div class="col-md-6 studentInfo">
           <h4>Student Name:  <span id="displayName"></span></h4>
-          <p> Email:<span id="displayEmail"></span></p>
-          <p> Current Course:<span id="displayCurrentClass"></span></p>
-          <p>Languages:</p>
+          <p> Email: <span id="displayEmail"></span></p>
+          <p> Current Course: <span id="displayCurrentClass"></span></p>
+          <p>Languages: </p>
           <ul id="displayLanguages">
+
           </ul>
-          <p> Previous Job:<span id="displayPreviousJob"></span></p>
-          <p> Hobbies/Interests:<span id="displayHobbies"></span></p>
+          <p> Previous Job: <span id="displayPreviousJob"></span></p>
+          <p> Hobbies/Interests: <span id="displayHobbies"></span></p>
 
         </div>
       </div>
