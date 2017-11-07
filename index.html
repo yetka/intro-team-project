@@ -9,7 +9,7 @@
   </head>
     <body>
       <div class="container">
-      <p>Please provide your information to help ohter students learn.</p>
+      <p>Please provide your information to help other students learn.</p>
       <form id="info">
         <div class="form-group">
          <label for="name">What is your full name:</label>
@@ -27,32 +27,36 @@
             <option>Android</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="current-class">What languages are you working with:</label>
-          <select class="form-control" id="current-class">
-            <option>HTML</option>
-            <option>CSS</option>
-            <option>C#</option>
-            <option>Java</option>
-            <option>PHP</option>
-            <option>Ruby</option>
-            <option>JavaScript</option>
-            <option>Android</option>
-            <option>Design</option>
-            <option>Drupal</option>
-            <option>.NET</option>
-            <option>Rails</option>
-            <option>React</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="skill">How confident are you in this language:</label>
-          <select class="form-control" id="skill">
-            <option>not really</option>
-            <option>ok</option>
-            <option>pretty good</option>
-            <option>expert</option>
-          </select>
+        <div id="newLanguage">
+          <div class="newLanguage">
+            <div class="form-group">
+              <label for="current-class">What languages are you working with:</label>
+              <select class="form-control current-language">
+                <option>HTML</option>
+                <option>CSS</option>
+                <option>C#</option>
+                <option>Java</option>
+                <option>PHP</option>
+                <option>Ruby</option>
+                <option>JavaScript</option>
+                <option>Android</option>
+                <option>Design</option>
+                <option>Drupal</option>
+                <option>.NET</option>
+                <option>Rails</option>
+                <option>React</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="skill">How confident are you in this language:</label>
+              <select class="form-control skill">
+                <option>not really</option>
+                <option>ok</option>
+                <option>pretty good</option>
+                <option>expert</option>
+              </select>
+            </div>
+          </div>
         </div>
         <span class="btn btn-primary" id="add-language">Add language</span>
         <button type="submit" class="btn">Submit forms</button>
