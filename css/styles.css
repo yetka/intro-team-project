@@ -19,3 +19,18 @@ label {
  .studentInfo {
    display: none;
  }
+
+  #cSharp, #ruby, #android {
+   cursor: pointer;
+   color: #0088cc;
+ }
+
+ #cSharp:hover {
+   text-decoration: underline;
+ }
+ #ruby:hover {
+   text-decoration: underline;
+ }
+ #android:hover {
+   text-decoration: underline;
+ }
