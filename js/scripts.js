@@ -14,21 +14,28 @@ function Language (language, confidence) {
   this.confidence = confidence;
 }
 
+//method to add student to 'all students' list
 Student.prototype.displayStudent = function() {
   $("#studentList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
+}
+
+//method to add student to language specific list
+Student.prototype.studentLanguage = function() {
   if (this.currentClass === "C#") {
-    $("#studentCList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
+    $("#studentCList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
   }
   if (this.currentClass === "Ruby") {
-    $("#studentRubyList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
-  } else {
-    $("#studentAndroidList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
+    $("#studentRubyList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
+  }
+  if (this.currentClass === "Android") {
+    $("#studentAndroidList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
   }
 }
 
+//method to display student info when clicked
 Student.prototype.showInfo = function(index) {
-  $(".studentInfo").show();
   clearFields();
+  $(".studentInfo").show();
   $("#displayName").text(this.fullName);
   $("#displayEmail").text(this.contactInfo);
   $("#displayCurrentClass").text(this.currentClass);
@@ -39,6 +46,7 @@ Student.prototype.showInfo = function(index) {
   })
 }
 
+//method to clear student display on new click
 var clearFields = function() {
   $("#displayName").text("");
   $("#displayEmail").text("");
@@ -48,6 +56,7 @@ var clearFields = function() {
   $("#displayLanguages").text("");
 }
 
+//method to clear form on submission
 var clearForm = function() {
   $("#name").val("");
   $("#contact").val("");
@@ -67,36 +76,36 @@ $(document).ready(function() {
   //add form option to input multiple languages
   $("#add-language").click(function() {
     $("#newLanguage").append('<div class="extraForm">' +
-      '<div class="newLanguage">' +
-        '<div class="form-group">' +
-          '<label for="current-class">Select another Language:</label>' +
-          '<select class="form-control current-language">' +
-            '<option>HTML</option>' +
-            '<option>CSS</option>' +
-            '<option>C#</option>' +
-            '<option>Java</option>' +
-            '<option>PHP</option>' +
-            '<option>Ruby</option>' +
-            '<option>JavaScript</option>' +
-            '<option>Android</option>' +
-            '<option>Design</option>' +
-            '<option>Drupal</option>' +
-            '<option>.NET</option>' +
-            '<option>Rails</option>' +
-            '<option>React</option>' +
-          '</select>' +
-        '</div>' +
-        '<div class="form-group">' +
-          '<label for="skill">How confident are you in this language:</label>' +
-          '<select class="form-control skill">' +
-            '<option>not really</option>' +
-            '<option>ok</option>' +
-            '<option>pretty good</option>' +
-            '<option>expert</option>' +
-          '</select>' +
-        '</div>' +
-      '</div>' +
-    '</div>');
+                              '<div class="newLanguage">' +
+                                '<div class="form-group">' +
+                                  '<label for="current-class">Select another Language:</label>' +
+                                  '<select class="form-control current-language">' +
+                                    '<option>HTML</option>' +
+                                    '<option>CSS</option>' +
+                                    '<option>C#</option>' +
+                                    '<option>Java</option>' +
+                                    '<option>PHP</option>' +
+                                    '<option>Ruby</option>' +
+                                    '<option>JavaScript</option>' +
+                                    '<option>Android</option>' +
+                                    '<option>Design</option>' +
+                                    '<option>Drupal</option>' +
+                                    '<option>.NET</option>' +
+                                    '<option>Rails</option>' +
+                                    '<option>React</option>' +
+                                  '</select>' +
+                                '</div>' +
+                                '<div class="form-group">' +
+                                  '<label for="skill">How confident are you in this language:</label>' +
+                                  '<select class="form-control skill">' +
+                                    '<option>not really</option>' +
+                                    '<option>ok</option>' +
+                                    '<option>pretty good</option>' +
+                                    '<option>expert</option>' +
+                                  '</select>' +
+                                '</div>' +
+                              '</div>' +
+                            '</div>');
   })
 
   //collect info from user
@@ -121,10 +130,18 @@ $(document).ready(function() {
       var newLanguage = new Language (language, confidence);
       newStudent.languages.push(newLanguage);
     })
-    newStudent.displayStudent();
 
+    //call methods to add student to correct lists
+    newStudent.displayStudent();
+    newStudent.studentLanguage();
     clearForm();
+
+    //function to display selected student details
     $(".clickStudent").last().click(function() {
+      newStudent.showInfo();
+    })
+
+    $(".studentLanguage").last().click(function() {
       newStudent.showInfo();
     })
   });

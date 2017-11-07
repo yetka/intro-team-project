@@ -16,7 +16,7 @@ label {
    margin: 20px;
  }
 
- .studentInfo {
+ .studentInfo, .androidClass, .html, .css, .cSharp, .java, .php, .ruby, .javaScript, .android, .design, .drupal, .dotNet, .rails, .react {
    display: none;
  }
 
