@@ -5,7 +5,7 @@
    <link href="css/styles.css" rel="stylesheet" type="text/css">
    <script src="js/jquery-3.2.1.js"></script>
    <script src="js/scripts.js"></script>
-    <title>Student Infotest</title>
+    <title>Student Info</title>
   </head>
     <body>
       <div class="container">
@@ -33,7 +33,7 @@
               <div class="newLanguage">
                 <div class="form-group">
                   <label for="current-class">What languages are you working with:</label>
-                  <select class="form-control" id="current-class">
+                  <select class="form-control current-language">
                     <option>HTML</option>
                     <option>CSS</option>
                     <option>C#</option>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="form-group">
                   <label for="skill">How confident are you in this language:</label>
-                  <select class="form-control" id="skill">
+                  <select class="form-control skill">
                     <option>not really</option>
                     <option>ok</option>
                     <option>pretty good</option>
@@ -74,6 +74,24 @@
         </div>
         <div class="col-md-6">
           <img src="img/confused-coder.jpg" alt="Picture of a confused coder.">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <ul id="studentList">
+
+          </ul>
+        </div>
+        <div class="col-md-6 studentInfo">
+          <h4>Student Name:  <span id="displayName"></span></h4>
+          <p> Email:<span id="displayEmail"></span></p>
+          <p> Current Course:<span id="displayCurrentClass"></span></p>
+          <p>Languages:</p>
+          <ul id="displayLanguages">
+          </ul>
+          <p> Previous Job:<span id="displayPreviousJob"></span></p>
+          <p> Hobbies/Interests:<span id="displayHobbies"></span></p>
+
         </div>
       </div>
     </div>
