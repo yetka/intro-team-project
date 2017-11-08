@@ -19,9 +19,8 @@ Student.prototype.displayStudent = function() {
   $("#studentList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
 }
 
-//method to add student to language specific list
-Student.prototype.studentLanguage = function() {
-  console.log(this.currentClass);
+//method to add student to class list
+Student.prototype.studentClass = function() {
   if (this.currentClass === "C#") {
     $("#cSharpClassList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
   }
@@ -30,6 +29,39 @@ Student.prototype.studentLanguage = function() {
   }
   if (this.currentClass === "Android") {
     $("#androidClassList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
+  }
+}
+
+//method to add student to list of each language learned
+Student.prototype.studentLanguage = function() {
+  for (index = 0; index < this.languages.length; index++) {
+    if (this.languages[index].language === "HTML") {
+      $("#studentHtmlList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    } if (this.languages[index].language === "CSS") {
+      $("#studentCssList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    } if (this.languages[index].language === "C#") {
+      $("#studentcSharpList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    } if (this.languages[index].language === "Java") {
+      $("#studentJavaList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    } if (this.languages[index].language === "PHP") {
+      $("#studentPhpList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    } if (this.languages[index].language === "Ruby") {
+      $("#studentRubyList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    } if (this.languages[index].language === "JavaScript") {
+      $("#studentJavaScriptList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    } if (this.languages[index].language === "Android") {
+      $("#studentAndroidList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    } if (this.languages[index].language === "Design") {
+      $("#studentDesignList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    } if (this.languages[index].language === "Drupal") {
+      $("#studentDrupalList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    } if (this.languages[index].language === ".NET") {
+      $("#studentDotNetList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    } if (this.languages[index].language === "Rails") {
+      $("#studentRailsList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    } if (this.languages[index].language === "React") {
+      $("#studentReactList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+    }
   }
 }
 
@@ -152,6 +184,7 @@ $(document).ready(function() {
 
     //call methods to add student to correct lists
     newStudent.displayStudent();
+    newStudent.studentClass();
     newStudent.studentLanguage();
     clearForm();
 
