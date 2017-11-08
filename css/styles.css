@@ -20,15 +20,15 @@ h4 {
    float: right;
    margin: 20px;
  }
-<<<<<<< HEAD
+
  p {
   font-weight: lighter;
 }
  .studentInfo {
-=======
+
+ }
 
  .studentInfo, .cSharpClass, .rubyClass, .androidClass, .html, .css, .cSharp, .java, .php, .ruby, .javaScript, .android, .design, .drupal, .dotNet, .rails, .react {
->>>>>>> eb614be55afb850ce452bb08aae4713648a87d92
    display: none;
  }
 

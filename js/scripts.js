@@ -25,16 +25,10 @@ Student.prototype.studentLanguage = function() {
     $("#studentCList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
   }
   if (this.currentClass === "Ruby") {
-<<<<<<< HEAD
-    $("#studentRubyList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
-  } if (this.currentClass === "Android") {
-    $("#studentAndroidList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
-=======
     $("#studentRubyList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
   }
   if (this.currentClass === "Android") {
     $("#studentAndroidList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
->>>>>>> eb614be55afb850ce452bb08aae4713648a87d92
   }
 }
 
