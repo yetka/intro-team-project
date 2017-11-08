@@ -21,14 +21,15 @@ Student.prototype.displayStudent = function() {
 
 //method to add student to language specific list
 Student.prototype.studentLanguage = function() {
+  console.log(this.currentClass);
   if (this.currentClass === "C#") {
-    $("#studentCList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
+    $("#cSharpClassList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
   }
   if (this.currentClass === "Ruby") {
-    $("#studentRubyList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
+    $("#rubyClassList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
   }
   if (this.currentClass === "Android") {
-    $("#studentAndroidList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
+    $("#androidClassList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
   }
 }
 
@@ -64,6 +65,26 @@ var clearForm = function() {
   $(".extraForm").remove();
   $("#work").val("");
   $("#hobby").val("");
+}
+
+var hideAll = function() {
+  $(".allStudents").hide();
+  $(".cSharpClass").hide();
+  $(".rubyClass").hide();
+  $(".androidClass").hide();
+  $(".html").hide();
+  $(".css").hide();
+  $(".cSharp").hide();
+  $(".java").hide();
+  $(".php").hide();
+  $(".ruby").hide();
+  $(".javaScript").hide();
+  $(".android").hide();
+  $(".design").hide();
+  $(".drupal").hide();
+  $(".dotNet").hide();
+  $(".rails").hide();
+  $(".react").hide();
 }
 
 
@@ -143,4 +164,18 @@ $(document).ready(function() {
       newStudent.showInfo();
     })
   });
+
+  //click functions to display desired list
+  $("#cSharp").click(function() {
+    hideAll();
+    $(".cSharpClass").show();
+  })
+  $("#ruby").click(function() {
+    hideAll();
+    $(".rubyClass").show();
+  })
+  $("#android").click(function() {
+    hideAll();
+    $(".androidClass").show();
+  })
 });
