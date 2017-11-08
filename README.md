@@ -28,10 +28,10 @@ Data is not saved anywhere. Everything is lost on page refresh.
 ## Support and contact details
 
 Email:
-  Kevin: kevinmbabcock@icloud.com
-  Malgorzata: gosia.haniszewska@gmail.com
-  Shane: microbistro@gmail.com
-  Qianqian: huqianqian@ymail.com
+  * Kevin: kevinmbabcock@icloud.com
+  * Malgorzata: gosia.haniszewska@gmail.com
+  * Shane: microbistro@gmail.com
+  * Qianqian: huqianqian@ymail.com
 
 
 ## Technologies Used
