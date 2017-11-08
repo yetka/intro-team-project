@@ -33,7 +33,7 @@ Student.prototype.studentLanguage = function() {
 }
 
 //method to display student info when clicked
-Student.prototype.showInfo = function(index) {
+Student.prototype.showInfo = function() {
   clearFields();
   $(".studentInfo").show();
   $("#displayName").text(this.fullName);
@@ -69,7 +69,6 @@ var clearForm = function() {
 
 //initialize global variables
 var students = [];
-var index = 0;
 
 $(document).ready(function() {
 
@@ -121,7 +120,6 @@ $(document).ready(function() {
     //create student object
     var newStudent = new Student (fullName, contactInfo, currentClass, previousJob, hobby);
     students.push(newStudent);
-    index = students.indexOf(newStudent);
 
     //assign language and confidence to new object, push to langauge object for student
     $(".newLanguage").each(function() {
