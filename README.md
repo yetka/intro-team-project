@@ -12,8 +12,8 @@ Specs:
 
 * Student name will display below form after submission
 * If student's name is clicked from any list, all the information they entered will appear to the right
-* If any of the links top right are clicked, all students who match that criteria will display in the list below the form.
-* If a language link is selected in the top right, then the students confidence in that language will appear next to their name in the list that appears.
+* If any of the links in the left are clicked, all students who match that criteria will display in the list below the form.
+* If a language link is selected in the left toolbar, the students confidence in that language will appear next to their name in the list that appears.
 
 ## Setup/Installation Requirements
 
@@ -23,16 +23,20 @@ Specs:
 
 ## Known Bugs
 
-None
+Data is not saved anywhere. Everything is lost on page refresh.
 
 ## Support and contact details
 
 Email:
   Kevin: kevinmbabcock@icloud.com
+  Malgorzata: gosia.haniszewska@gmail.com
+  Shane: microbistro@gmail.com
+  Qianqian: huqianqian@ymail.com
+
 
 ## Technologies Used
 
-Javascript, with HTML and CSS
+JavaScript, with HTML and CSS
 
 ### License
 
