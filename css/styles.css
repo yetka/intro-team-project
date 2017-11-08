@@ -1,40 +1,74 @@
+body {
+  background-color: #e6e6e6;
+}
+
+.img {
+ float: left;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #D3D3D3;
+}
+
+.userInput {
+  width: 700px;
+  float: left;
+  margin: 10px;
+  padding: 40px;
+}
+
 label {
   color: grey;
   font-weight: lighter;
 }
-h1 {
-  margin: 10px;
-  padding: 40px;
-  background-color: tan;
-  text-align: center;
-  font-family: fantasy;
-  font-weight: bold;
-}
-h4 {
-  font-weight: lighter;
-}
- body {
-   background-color: #e6e6e6;
- }
- img {
-   float: right;
-   margin: 20px;
- }
 
- p, .studentInfo li {
+.studentInfo li {
   font-weight: lighter;
 }
  .studentInfo {
-
+   background-color: #00cccc;
+   border: 3px solid black;
+   margin: 10px;
+   padding: 10px;
+   width: 400px;
+   float: left;
  }
+
+ .toolbar {
+   background-color: #C0C0C0;
+   border: 3px solid black;
+   margin: 10px;
+   padding: 10px;
+   width: 200px;
+   float: left;
+   line-height: 1;
+ }
+
+ .rowToDisplay {
+   float: left;
+   padding: 20px;
+ }
+
+ .listToDisplay {
+   width: 500px;
+   float: left;
+ }
+
 
  .studentInfo, .cSharpClass, .rubyClass, .androidClass, .html, .css, .cSharp, .java, .php, .ruby, .javaScript, .android, .design, .drupal, .dotNet, .rails, .react {
    display: none;
+
  }
 
   #all-students, #class-cSharp, #class-ruby, #class-android, #html, #css, #cSharp, #java, #php, #ruby, #javaScript, #android, #design, #drupal, #net, #rails, #react {
    cursor: pointer;
-   color: #0088cc;
+   color: #00b3b3;
  }
 
  #all-students:hover, #class-cSharp:hover, #class-ruby:hover, #class-android:hover, #html:hover, #css:hover, #cSharp:hover, #java:hover, #php:hover, #ruby:hover, #javaScript:hover, #android:hover, #design:hover, #drupal:hover, #net:hover, #rails:hover, #react:hover {

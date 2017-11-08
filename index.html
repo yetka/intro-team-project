@@ -7,82 +7,24 @@
    <script src="js/scripts.js"></script>
     <title>Student Info</title>
   </head>
-    <body>
-      <div class="container">
-      <h1>Please provide your information to help other students learn.</h1>
-      <div class="row">
-        <div class="col-md-6">
-          <form id="info">
-            <div class="form-group">
-             <label for="name">What is your full name:</label>
-             <input id="name" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-             <label for="contact">What is your email:</label>
-             <input id="contact" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-             <label for="work">Let other students know what you were doing before starting at Epicodus:</label>
-             <input id="work" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-            <label for="hobby">What do you like to do outside of work and class:</label>
-            <input id="hobby" class="form-control" type="text">
-           </div>
-            <div class="form-group">
-              <label for="current-class">What class are you currently in:</label>
-              <select class="form-control" id="current-class">
-                <option>C#</option>
-                <option>Ruby</option>
-                <option>Android</option>
-              </select>
-            </div>
-            <div id="newLanguage">
-              <div class="newLanguage">
-                <div class="form-group">
-                  <label for="current-class">What languages are you working with:</label>
-                  <select class="form-control current-language">
-                    <option>HTML</option>
-                    <option>CSS</option>
-                    <option>C#</option>
-                    <option>Java</option>
-                    <option>PHP</option>
-                    <option>Ruby</option>
-                    <option>JavaScript</option>
-                    <option>Android</option>
-                    <option>Design</option>
-                    <option>Drupal</option>
-                    <option>.NET</option>
-                    <option>Rails</option>
-                    <option>React</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="skill">How confident are you in this language:</label>
-                  <select class="form-control skill">
-                    <option>not really</option>
-                    <option>ok</option>
-                    <option>pretty good</option>
-                    <option>expert</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            <span class="btn btn-primary" id="add-language">Add language</span>
-            <button type="submit" class="btn">Submit forms</button>
-          </form>
-        </div>
-        <div class="col-md-3">
-          <h4 id="all-students"><strong>Display all students</strong></h4>
-          <h4>Search by Class:</h4>
+  <body>
+    <div class="container">
+      <div class="img">
+        <img src="img/epicodus-logo.png" alt="epicodus logo image">
+      </div>
+      <div class="jumbotron">
+        <h1>Epicodus Students</h1>
+        <h3>We created this page to help Epicodus students connect with other students.</h3>
+      </div>
+      <div class="toolbar">
+        <h3><strong>Search Students:</strong></h3>
+        <ul>
+          <li><h4 id="all-students"><strong>All students</strong></h4></li>
+          <li><h4>Class:</h4>
           <p id="class-cSharp"> C# </p>
           <p id="class-ruby"> Ruby </p>
-          <p id="class-android"> Android </p>
-          <!-- <img src="img/confused-coder.jpg" alt="Picture of a confused coder."> -->
-        </div>
-        <div class="col-md-3">
-          <h4>Search by Language Needed Help With:</h4>
+          <p id="class-android"> Android </p></li>
+          <li><h4>Language:</h4>
           <p id="html"> HTML </p>
           <p id="css"> CSS </p>
           <p id="cSharp"> C# </p>
@@ -95,12 +37,73 @@
           <p id="drupal"> Drupal </p>
           <p id="net"> .NET </p>
           <p id="rails"> Rails </p>
-          <p id="react"> React </p>
-        </div>
+          <p id="react"> React </p></li>
+        </ul>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <p></p>
+      <div class="userInput">
+        <form id="info">
+          <h3>Add your information to our database:</h3>
+          <div class="form-group">
+           <label for="name">Full name:</label>
+           <input id="name" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+           <label for="contact">Email:</label>
+           <input id="contact" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+           <label for="work">Let other students know what you were doing before starting at Epicodus:</label>
+           <input id="work" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+          <label for="hobby">Hobbies/Interests:</label>
+          <input id="hobby" class="form-control" type="text">
+         </div>
+          <div class="form-group">
+            <label for="current-class">Current class:</label>
+            <select class="form-control" id="current-class">
+              <option>C#</option>
+              <option>Ruby</option>
+              <option>Android</option>
+            </select>
+          </div>
+          <div id="newLanguage">
+            <div class="newLanguage">
+              <div class="form-group">
+                <label for="current-class">What languages are you working with:</label>
+                <select class="form-control current-language">
+                  <option>HTML</option>
+                  <option>CSS</option>
+                  <option>C#</option>
+                  <option>Java</option>
+                  <option>PHP</option>
+                  <option>Ruby</option>
+                  <option>JavaScript</option>
+                  <option>Android</option>
+                  <option>Design</option>
+                  <option>Drupal</option>
+                  <option>.NET</option>
+                  <option>Rails</option>
+                  <option>React</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="skill">How confident are you in this language:</label>
+                <select class="form-control skill">
+                  <option>not really</option>
+                  <option>ok</option>
+                  <option>pretty good</option>
+                  <option>expert</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <span class="btn btn-secondary" id="add-language">Add language</span>
+          <button type="submit" class="btn btn-info">Submit forms</button>
+        </form>
+      </div>
+      <div class="rowToDisplay">
+        <div class="listToDisplay">
           <div class="allStudents">
             <h3>List of all Epicodus Students:</h3>
             <ul id="studentList">
@@ -188,15 +191,15 @@
             </ul>
           </div>
         </div>
-        <div class="col-md-6 studentInfo">
+        <div class="studentInfo">
           <h4> Student Name:  <span id="displayName"></span></h4>
-          <p> Email: <span id="displayEmail"></span></p>
-          <p> Current Course: <span id="displayCurrentClass"></span></p>
-          <p> Languages: </p>
+          <p><strong> Email: </strong><span id="displayEmail"></span></p>
+          <p><strong> Current Class: </strong><span id="displayCurrentClass"></span></p>
+          <p><strong> Languages: </strong></p>
           <ul id="displayLanguages">
           </ul>
-          <p> Previous Job: <span id="displayPreviousJob"></span></p>
-          <p> Hobbies/Interests: <span id="displayHobbies"></span></p>
+          <p><strong> Previous Job: </strong><span id="displayPreviousJob"></span></p>
+          <p><strong> Hobbies/Interests: </strong><span id="displayHobbies"></span></p>
         </div>
       </div>
     </div>
