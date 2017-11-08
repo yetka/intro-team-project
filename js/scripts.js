@@ -182,4 +182,56 @@ $(document).ready(function() {
     hideAll();
     $(".androidClass").show();
   })
+  $("#html").click(function() {
+    hideAll();
+    $(".html").show();
+  })
+  $("#css").click(function() {
+    hideAll();
+    $(".css").show();
+  })
+  $("#cSharp").click(function() {
+    hideAll();
+    $(".cSharp").show();
+  })
+  $("#java").click(function() {
+    hideAll();
+    $(".java").show();
+  })
+  $("#php").click(function() {
+    hideAll();
+    $(".php").show();
+  })
+  $("#ruby").click(function() {
+    hideAll();
+    $(".ruby").show();
+  })
+  $("#javaScript").click(function() {
+    hideAll();
+    $(".javaScript").show();
+  })
+  $("#android").click(function() {
+    hideAll();
+    $(".android").show();
+  })
+  $("#design").click(function() {
+    hideAll();
+    $(".design").show();
+  })
+  $("#drupal").click(function() {
+    hideAll();
+    $(".drupal").show();
+  })
+  $("#net").click(function() {
+    hideAll();
+    $(".dotNet").show();
+  })
+  $("#rails").click(function() {
+    hideAll();
+    $(".rails").show();
+  })
+  $("#react").click(function() {
+    hideAll();
+    $(".react").show();
+  })
 });
