@@ -166,15 +166,15 @@ $(document).ready(function() {
   });
 
   //click functions to display desired list
-  $("#cSharp").click(function() {
+  $("#class-cSharp").click(function() {
     hideAll();
     $(".cSharpClass").show();
   })
-  $("#ruby").click(function() {
+  $("#class-ruby").click(function() {
     hideAll();
     $(".rubyClass").show();
   })
-  $("#android").click(function() {
+  $("#class-android").click(function() {
     hideAll();
     $(".androidClass").show();
   })
