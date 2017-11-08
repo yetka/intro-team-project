@@ -1,36 +1,37 @@
 label {
   color: grey;
+  font-weight: lighter;
 }
-#header {
+h1 {
   margin: 10px;
   padding: 40px;
-  background-color: #e6e6e6;
+  background-color: tan;
   text-align: center;
   font-family: fantasy;
+  font-weight: bold;
+}
+h4 {
+  font-weight: lighter;
 }
  body {
-   background-color: tan;
+   background-color: #e6e6e6;
  }
  img {
    float: right;
    margin: 20px;
  }
-
+ p {
+  font-weight: lighter;
+}
  .studentInfo {
    display: none;
  }
 
-  #cSharp, #ruby, #android {
+  #class-cSharp, #class-ruby, #class-android, #html, #css, #cSharp, #java, #php, #ruby, #javaScript, #android, #design, #drupal, #net, #rails, #react {
    cursor: pointer;
    color: #0088cc;
  }
 
- #cSharp:hover {
-   text-decoration: underline;
- }
- #ruby:hover {
-   text-decoration: underline;
- }
- #android:hover {
+ #class-cSharp:hover, #class-ruby:hover, #class-android:hover, #html:hover, #css:hover, #cSharp:hover, #java:hover, #php:hover, #ruby:hover, #javaScript:hover, #android:hover, #design:hover, #drupal:hover, #net:hover, #rails:hover, #react:hover {
    text-decoration: underline;
  }

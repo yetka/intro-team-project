@@ -21,7 +21,7 @@ Student.prototype.displayStudent = function() {
   }
   if (this.currentClass === "Ruby") {
     $("#studentRubyList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
-  } else {
+  } if (this.currentClass === "Android") {
     $("#studentAndroidList").append("<li><span class='clickStudent'>" + this.fullName + "</span></li>");
   }
 }

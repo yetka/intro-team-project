@@ -5,11 +5,11 @@
    <link href="css/styles.css" rel="stylesheet" type="text/css">
    <script src="js/jquery-3.2.1.js"></script>
    <script src="js/scripts.js"></script>
-    <title>Student Infotest</title>
+    <title>Student Info</title>
   </head>
     <body>
       <div class="container">
-      <h1 id="header">Please provide your information to help other students learn.</h1>
+      <h1>Please provide your information to help other students learn.</h1>
       <div class="row">
         <div class="col-md-6">
           <form id="info">
@@ -21,6 +21,14 @@
              <label for="contact">What is your email:</label>
              <input id="contact" class="form-control" type="text">
             </div>
+            <div class="form-group">
+             <label for="work">Let other students know what you were doing before starting at Epicodus:</label>
+             <input id="work" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+            <label for="hobby">What do you like to do outside of work and class:</label>
+            <input id="hobby" class="form-control" type="text">
+           </div>
             <div class="form-group">
               <label for="current-class">What class are you currently in:</label>
               <select class="form-control" id="current-class">
@@ -60,44 +68,54 @@
                 </div>
               </div>
             </div>
-            <div class="form-group">
-             <label for="work">Let other students know what you were doing before starting at Epicodus:</label>
-             <input id="work" class="form-control" type="text">
-            </div>
-            <div class="form-group">
-            <label for="hobby">What do you like to do outside of work and class:</label>
-            <input id="hobby" class="form-control" type="text">
-           </div>
+
             <span class="btn btn-primary" id="add-language">Add language</span>
             <button type="submit" class="btn">Submit forms</button>
           </form>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
+          <h4>Search by Class:</h4>
+          <p id="class-cSharp"> C# </p>
+          <p id="class-ruby"> Ruby </p>
+          <p id="class-android"> Android </p>
+          <!-- <img src="img/confused-coder.jpg" alt="Picture of a confused coder."> -->
+        </div>
+        <div class="col-md-3">
+          <h4>Search by Language Needed Help With:</h4>
+          <p id="html"> HTML </p>
+          <p id="css"> CSS </p>
           <p id="cSharp"> C# </p>
+          <p id="java"> Java </p>
+          <p id="php"> PHP </p>
           <p id="ruby"> Ruby </p>
+          <p id="javaScript"> JavaScript </p>
           <p id="android"> Android </p>
-          <img src="img/confused-coder.jpg" alt="Picture of a confused coder.">
+          <p id="design"> Design </p>
+          <p id="drupal"> Drupal </p>
+          <p id="net"> .NET </p>
+          <p id="rails"> Rails </p>
+          <p id="react"> React </p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="allStudents">
-            <h3>List of all Epicodus Students:</h3>
+            <h4>List of all Epicodus Students:</h4>
             <ul id="studentList">
             </ul>
           </div>
           <div class="cSharp">
-            <h3>List of C# class:</h3>
+            <h4>List of C# class:</h4>
             <ul id="studentCList">
             </ul>
           </div>
           <div class="ruby">
-            <h3>List of Ruby class:</h3>
+            <h4>List of Ruby class:</h4>
             <ul id="studentRubyList">
             </ul>
           </div>
           <div class="android">
-            <h3>List of Android class:</h3>
+            <h4>List of Android class:</h4>
             <ul id="studentAndroidList">
             </ul>
           </div>
