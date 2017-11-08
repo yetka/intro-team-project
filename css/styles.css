@@ -21,14 +21,14 @@ h4 {
    margin: 20px;
  }
 
- p {
+ p, .studentInfo li {
   font-weight: lighter;
 }
  .studentInfo {
 
  }
 
- .studentInfo, .allStudents, .cSharpClass, .rubyClass, .androidClass, .html, .css, .cSharp, .java, .php, .ruby, .javaScript, .android, .design, .drupal, .dotNet, .rails, .react {
+ .studentInfo, .cSharpClass, .rubyClass, .androidClass, .html, .css, .cSharp, .java, .php, .ruby, .javaScript, .android, .design, .drupal, .dotNet, .rails, .react {
    display: none;
  }
 

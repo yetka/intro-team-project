@@ -75,7 +75,7 @@ Student.prototype.showInfo = function() {
   $("#displayPreviousJob").text(this.previousJob);
   $("#displayHobbies").text(this.hobby);
   this.languages.forEach(function(language) {
-    $("#displayLanguages").append("<li>" + language.language + " " + language.confidence + "</li>");
+    $("#displayLanguages").append("<li>" + language.language + "<br />Confidence: " + language.confidence + "</li>");
   })
 }
 
