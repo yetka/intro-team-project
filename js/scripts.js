@@ -97,6 +97,8 @@ var clearForm = function() {
   $(".extraForm").remove();
   $("#work").val("");
   $("#hobby").val("");
+  $(".current-language").val("");
+  $(".skill").val("");
 }
 
 var hideAll = function() {
@@ -132,6 +134,7 @@ $(document).ready(function() {
                                 '<div class="form-group">' +
                                   '<label for="current-class">Select another Language:</label>' +
                                   '<select class="form-control current-language">' +
+                                  '<option value="">Select One:</option>' +
                                     '<option>HTML</option>' +
                                     '<option>CSS</option>' +
                                     '<option>C#</option>' +
@@ -150,10 +153,11 @@ $(document).ready(function() {
                                 '<div class="form-group">' +
                                   '<label for="skill">How confident are you in this language:</label>' +
                                   '<select class="form-control skill">' +
-                                    '<option>not really</option>' +
-                                    '<option>ok</option>' +
-                                    '<option>pretty good</option>' +
-                                    '<option>expert</option>' +
+                                  '<option value="">Select One:</option>' +
+                                    '<option>Not really</option>' +
+                                    '<option>OK</option>' +
+                                    '<option>Pretty Good</option>' +
+                                    '<option>Expert</option>' +
                                   '</select>' +
                                 '</div>' +
                               '</div>' +
