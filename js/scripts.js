@@ -166,6 +166,10 @@ $(document).ready(function() {
   });
 
   //click functions to display desired list
+  $("#all-students").click(function() {
+    hideAll();
+    $(".allStudents").show();
+  })
   $("#class-cSharp").click(function() {
     hideAll();
     $(".cSharpClass").show();

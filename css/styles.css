@@ -28,15 +28,15 @@ h4 {
 
  }
 
- .studentInfo, .cSharpClass, .rubyClass, .androidClass, .html, .css, .cSharp, .java, .php, .ruby, .javaScript, .android, .design, .drupal, .dotNet, .rails, .react {
+ .studentInfo, .allStudents, .cSharpClass, .rubyClass, .androidClass, .html, .css, .cSharp, .java, .php, .ruby, .javaScript, .android, .design, .drupal, .dotNet, .rails, .react {
    display: none;
  }
 
-  #class-cSharp, #class-ruby, #class-android, #html, #css, #cSharp, #java, #php, #ruby, #javaScript, #android, #design, #drupal, #net, #rails, #react {
+  #all-students, #class-cSharp, #class-ruby, #class-android, #html, #css, #cSharp, #java, #php, #ruby, #javaScript, #android, #design, #drupal, #net, #rails, #react {
    cursor: pointer;
    color: #0088cc;
  }
 
- #class-cSharp:hover, #class-ruby:hover, #class-android:hover, #html:hover, #css:hover, #cSharp:hover, #java:hover, #php:hover, #ruby:hover, #javaScript:hover, #android:hover, #design:hover, #drupal:hover, #net:hover, #rails:hover, #react:hover {
+ #all-students:hover, #class-cSharp:hover, #class-ruby:hover, #class-android:hover, #html:hover, #css:hover, #cSharp:hover, #java:hover, #php:hover, #ruby:hover, #javaScript:hover, #android:hover, #design:hover, #drupal:hover, #net:hover, #rails:hover, #react:hover {
    text-decoration: underline;
  }
