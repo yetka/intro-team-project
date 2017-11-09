@@ -71,6 +71,6 @@ label {
    color: #00b3b3;
  }
 
- #all-students:hover, #class-cSharp:hover, #class-ruby:hover, #class-android:hover, #html:hover, #css:hover, #cSharp:hover, #java:hover, #php:hover, #ruby:hover, #javaScript:hover, #android:hover, #design:hover, #drupal:hover, #net:hover, #rails:hover, #react:hover, .clickStudent:hover, .studentLanguage:hover, .studentClass:hover {
+ #all-students:hover, #class-cSharp:hover, #class-ruby:hover, #class-android:hover, #html:hover, #css:hover, #cSharp:hover, #java:hover, #php:hover, #ruby:hover, #javaScript:hover, #android:hover, #design:hover, #drupal:hover, #net:hover, #rails:hover, #react:hover, .clickStudent:hover, .studentLanguage:hover, .studentClass:hover, #underline {
    text-decoration: underline;
  }

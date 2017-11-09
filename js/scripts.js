@@ -70,13 +70,12 @@ Student.prototype.showInfo = function() {
   clearFields();
   $(".studentInfo").show();
   $("#displayName").text(this.fullName);
-  $("#displayEmail").text(this.contact);
+  // $("#displayEmail").remove(".removeAnchor");
+  $("#displayEmail").append("<a href='mailto:" + this.contact + "' class='removeAnchor'>" + this.contact + "</a>");
   $("#displayCurrentClass").text(this.currentClass);
   $("#displayPreviousJob").text(this.previousJob);
   $("#displayHobbies").text(this.hobby);
-  for (index=0; index < this.languages.length; index++) {
 
-  }
   this.languages.forEach(function(language) {
     if (language.language !== "") {
       if (language.confidence !== "") {
@@ -84,7 +83,6 @@ Student.prototype.showInfo = function() {
       } else {
         $("#displayLanguages").append("<li>" + language.language + "<br />Confidence: None Provided</li>");
       }
-
     }
   })
 }
@@ -186,7 +184,6 @@ $(document).ready(function() {
 
     //create student object
     var newStudent = new Student (fullName, contactInfo, currentClass, previousJob, hobby);
-    console.log(newStudent);
     students.push(newStudent);
 
     //assign language and confidence to new object, push to langauge object for student
@@ -205,13 +202,13 @@ $(document).ready(function() {
       newStudent.languages.push(newLanguage);
     })
 
-    //call methods to add student to correct lists
+    //call methods to add student to correct list
     newStudent.displayStudent();
     newStudent.studentClass();
     newStudent.studentLanguage();
     clearForm();
 
-    //function to display selected student details
+    //functions to display selected student details
     $(".clickStudent").last().click(function() {
       newStudent.showInfo();
     })
