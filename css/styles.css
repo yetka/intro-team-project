@@ -66,11 +66,11 @@ label {
 
  }
 
-  #all-students, #class-cSharp, #class-ruby, #class-android, #html, #css, #cSharp, #java, #php, #ruby, #javaScript, #android, #design, #drupal, #net, #rails, #react {
+  #all-students, #class-cSharp, #class-ruby, #class-android, #html, #css, #cSharp, #java, #php, #ruby, #javaScript, #android, #design, #drupal, #net, #rails, #react, .clickStudent, .studentLanguage, .studentClass {
    cursor: pointer;
    color: #00b3b3;
  }
 
- #all-students:hover, #class-cSharp:hover, #class-ruby:hover, #class-android:hover, #html:hover, #css:hover, #cSharp:hover, #java:hover, #php:hover, #ruby:hover, #javaScript:hover, #android:hover, #design:hover, #drupal:hover, #net:hover, #rails:hover, #react:hover {
+ #all-students:hover, #class-cSharp:hover, #class-ruby:hover, #class-android:hover, #html:hover, #css:hover, #cSharp:hover, #java:hover, #php:hover, #ruby:hover, #javaScript:hover, #android:hover, #design:hover, #drupal:hover, #net:hover, #rails:hover, #react:hover, .clickStudent:hover, .studentLanguage:hover, .studentClass:hover {
    text-decoration: underline;
  }
