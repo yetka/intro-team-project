@@ -70,7 +70,7 @@ Student.prototype.showInfo = function() {
   clearFields();
   $(".studentInfo").show();
   $("#displayName").text(this.fullName);
-  $("#displayEmail").text(this.contactInfo);
+  $("#displayEmail").text(this.contact);
   $("#displayCurrentClass").text(this.currentClass);
   $("#displayPreviousJob").text(this.previousJob);
   $("#displayHobbies").text(this.hobby);
@@ -78,8 +78,13 @@ Student.prototype.showInfo = function() {
 
   }
   this.languages.forEach(function(language) {
-    if (language.language !== "" && language.confidence !== "") {
-      $("#displayLanguages").append("<li>" + language.language + "<br />Confidence: " + language.confidence + "</li>");
+    if (language.language !== "") {
+      if (language.confidence !== "") {
+        $("#displayLanguages").append("<li>" + language.language + "<br />Confidence: " + language.confidence + "</li>");
+      } else {
+        $("#displayLanguages").append("<li>" + language.language + "<br />Confidence: None Provided</li>");
+      }
+
     }
   })
 }
@@ -181,6 +186,7 @@ $(document).ready(function() {
 
     //create student object
     var newStudent = new Student (fullName, contactInfo, currentClass, previousJob, hobby);
+    console.log(newStudent);
     students.push(newStudent);
 
     //assign language and confidence to new object, push to langauge object for student
