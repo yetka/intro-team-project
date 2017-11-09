@@ -22,13 +22,13 @@ Student.prototype.displayStudent = function() {
 //method to add student to class list
 Student.prototype.studentClass = function() {
   if (this.currentClass === "C#") {
-    $("#cSharpClassList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
+    $("#cSharpClassList").append("<li><span class='studentClass'>" + this.fullName + "</span></li>");
   }
   if (this.currentClass === "Ruby") {
-    $("#rubyClassList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
+    $("#rubyClassList").append("<li><span class='studentClass'>" + this.fullName + "</span></li>");
   }
   if (this.currentClass === "Android") {
-    $("#androidClassList").append("<li><span class='studentLanguage'>" + this.fullName + "</span></li>");
+    $("#androidClassList").append("<li><span class='studentClass'>" + this.fullName + "</span></li>");
   }
 }
 
@@ -102,6 +102,7 @@ var clearForm = function() {
 }
 
 var hideAll = function() {
+  $(".studentInfo").hide();
   $(".allStudents").hide();
   $(".cSharpClass").hide();
   $(".rubyClass").hide();
@@ -198,6 +199,10 @@ $(document).ready(function() {
     })
 
     $(".studentLanguage").last().click(function() {
+      newStudent.showInfo();
+    })
+
+    $(".studentClass").last().click(function() {
       newStudent.showInfo();
     })
   });
