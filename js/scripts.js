@@ -40,7 +40,7 @@ Student.prototype.studentLanguage = function() {
     } if (this.languages[index].language === "CSS") {
       $("#studentCssList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
     } if (this.languages[index].language === "C#") {
-      $("#studentcSharpList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+      $("#studentCSharpList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
     } if (this.languages[index].language === "Java") {
       $("#studentJavaList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
     } if (this.languages[index].language === "PHP") {
@@ -74,8 +74,13 @@ Student.prototype.showInfo = function() {
   $("#displayCurrentClass").text(this.currentClass);
   $("#displayPreviousJob").text(this.previousJob);
   $("#displayHobbies").text(this.hobby);
+  for (index=0; index < this.languages.length; index++) {
+
+  }
   this.languages.forEach(function(language) {
-    $("#displayLanguages").append("<li>" + language.language + "<br />Confidence: " + language.confidence + "</li>");
+    if (language.language !== "" && language.confidence !== "") {
+      $("#displayLanguages").append("<li>" + language.language + "<br />Confidence: " + language.confidence + "</li>");
+    }
   })
 }
 
@@ -121,7 +126,6 @@ var hideAll = function() {
   $(".rails").hide();
   $(".react").hide();
 }
-
 
 //initialize global variables
 var students = [];
@@ -181,8 +185,16 @@ $(document).ready(function() {
 
     //assign language and confidence to new object, push to langauge object for student
     $(".newLanguage").each(function() {
-      var language = $(this).find(".current-language").val();
-      var confidence = $(this).find(".skill").val();
+      if ($(this).find(".current-language").val()) {
+        var language = $(this).find(".current-language").val();
+      } else {
+        var language = "";
+      }
+      if ($(this).find(".skill").val()) {
+        var confidence = $(this).find(".skill").val();
+      } else {
+        var confidence = "";
+      }
       var newLanguage = new Language (language, confidence);
       newStudent.languages.push(newLanguage);
     })
