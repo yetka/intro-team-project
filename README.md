@@ -11,9 +11,11 @@ This application will ask for information from Epicodus students, and place the 
 Specs:
 
 * Student name will display below form after submission
-* If student's name is clicked from any list, all the information they entered will appear to the right
-* If any of the links in the left are clicked, all students who match that criteria will display in the list below the form.
-* If a language link is selected in the left toolbar, the students confidence in that language will appear next to their name in the list that appears.
+* When student's name is clicked from any list, all the information they entered will appear to the right.
+* If a language is provided without confidence, it will tell user that there was no confidence provided.
+* If a language form is left empty, nothing will be added to student object.
+* When any of the links on the left are clicked, all students who match that criteria will display in the list below the form.
+* When a language link is selected in the left toolbar, the students confidence in that language will appear next to their name in the list that appears.
 
 ## Setup/Installation Requirements
 
