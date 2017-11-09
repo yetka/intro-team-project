@@ -36,31 +36,83 @@ Student.prototype.studentClass = function() {
 Student.prototype.studentLanguage = function() {
   for (index = 0; index < this.languages.length; index++) {
     if (this.languages[index].language === "HTML") {
-      $("#studentHtmlList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+      if (this.languages[index].confidence === "") {
+        $("#studentHtmlList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+      } else {
+        $("#studentHtmlList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+      }
     } if (this.languages[index].language === "CSS") {
-      $("#studentCssList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        if (this.languages[index].confidence === "") {
+          $("#studentCssList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+        } else {
+          $("#studentCssList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        }
     } if (this.languages[index].language === "C#") {
-      $("#studentCSharpList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        if (this.languages[index].confidence === "") {
+          $("#studentCSharpList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+        } else {
+          $("#studentCSharpList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        }
     } if (this.languages[index].language === "Java") {
-      $("#studentJavaList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        if (this.languages[index].confidence === "") {
+          $("#studentJavaList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+        } else {
+          $("#studentJavaList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        }
     } if (this.languages[index].language === "PHP") {
-      $("#studentPhpList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        if (this.languages[index].confidence === "") {
+          $("#studentPhpList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+        } else {
+          $("#studentPhpList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        }
     } if (this.languages[index].language === "Ruby") {
-      $("#studentRubyList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        if (this.languages[index].confidence === "") {
+          $("#studentRubyList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+        } else {
+          $("#studentRubyList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        }
     } if (this.languages[index].language === "JavaScript") {
-      $("#studentJavaScriptList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        if (this.languages[index].confidence === "") {
+          $("#studentJavaScriptList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+        } else {
+          $("#studentJavaScriptList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        }
     } if (this.languages[index].language === "Android") {
-      $("#studentAndroidList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        if (this.languages[index].confidence === "") {
+          $("#studentAndroidList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+        } else {
+          $("#studentAndroidList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        }
     } if (this.languages[index].language === "Design") {
-      $("#studentDesignList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        if (this.languages[index].confidence === "") {
+          $("#studentDesignList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+        } else {
+          $("#studentDesignList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        }
     } if (this.languages[index].language === "Drupal") {
-      $("#studentDrupalList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        if (this.languages[index].confidence === "") {
+          $("#studentDrupalList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+        } else {
+          $("#studentDrupalList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        }
     } if (this.languages[index].language === ".NET") {
-      $("#studentDotNetList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        if (this.languages[index].confidence === "") {
+          $("#studentDotNetList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+        } else {
+          $("#studentDotNetList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        }
     } if (this.languages[index].language === "Rails") {
-      $("#studentRailsList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        if (this.languages[index].confidence === "") {
+          $("#studentRailsList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+        } else {
+          $("#studentRailsList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        }
     } if (this.languages[index].language === "React") {
-      $("#studentReactList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        if (this.languages[index].confidence === "") {
+          $("#studentReactList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: None Provided");
+        } else {
+          $("#studentReactList").append("<li><span class='studentLanguage'>" + this.fullName + "</span><br /> Confidence: " + this.languages[index].confidence);
+        }
     }
   }
 }
